@@ -1,0 +1,17 @@
+{
+  "name": "Trippi — 旅遊規劃",
+  "short_name": "Trippi",
+  "description": "離線優先旅遊規劃 App：行程時間軸、地圖、航班、酒店、拆帳、天氣、即時協作",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0C1E2E",
+  "theme_color": "#0C1E2E",
+  "lang": "zh-Hant",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

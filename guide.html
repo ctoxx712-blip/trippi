@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trippi：點樣同太太夾行程</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;600;700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#0C1E2E;--canvas:#EDF3F2;--surface:#fff;--brand:#0B6E63;--brand-bright:#12B3A0;
+    --accent:#F0A63C;--danger:#E5533C;--muted:#5E7379;--muted-2:#7d9298;--line:#D8E3E1;--line-soft:#E7EEED;
+    --disp:"Space Grotesk",system-ui,sans-serif;--body:"Inter","PingFang HK","Microsoft JhengHei",system-ui,sans-serif;--mono:"Space Mono",monospace;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--body);background:var(--canvas);color:var(--ink);line-height:1.65}
+  .wrap{max-width:640px;margin:0 auto;padding:30px 18px 60px}
+  header{text-align:center;margin-bottom:22px}
+  .logo{display:inline-flex;align-items:center;gap:9px;font-family:var(--disp);font-weight:700;font-size:23px}
+  .logo svg{width:30px;height:30px}
+  .sub{color:var(--muted);font-size:13px;margin-top:4px}
+  .hero{background:linear-gradient(135deg,#0B6E63,#0a5a51);color:#fff;border-radius:20px;padding:24px;margin-bottom:16px;box-shadow:0 14px 30px -20px rgba(11,110,99,.9)}
+  .hero .badge{display:inline-block;font-family:var(--mono);font-size:10.5px;font-weight:700;padding:4px 10px;border-radius:999px;background:var(--accent);color:#3a2a05;margin-bottom:11px}
+  .hero h2{font-family:var(--disp);font-size:21px;font-weight:700;margin-bottom:14px}
+  .steps{list-style:none;counter-reset:s}
+  .steps li{counter-increment:s;position:relative;padding:0 0 14px 38px;font-size:14.5px}
+  .steps li:last-child{padding-bottom:0}
+  .steps li::before{content:counter(s);position:absolute;left:0;top:1px;width:25px;height:25px;border-radius:50%;background:#fff;color:var(--brand);display:grid;place-items:center;font-family:var(--mono);font-weight:700;font-size:12px}
+  .steps b{font-weight:700}
+  .btnish{display:inline-block;background:#ffffff26;border:1px solid #ffffff40;border-radius:8px;padding:3px 9px;font-size:13px;font-weight:700;white-space:nowrap}
+  .note{font-size:12.5px;color:#a9d8ce;margin-top:14px;line-height:1.75;border-top:1px solid #ffffff26;padding-top:12px}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;margin-bottom:14px}
+  .card h3{font-family:var(--disp);font-size:16px;font-weight:700;margin-bottom:8px}
+  .card p{font-size:13.5px;margin-bottom:8px}
+  .k{font-family:var(--mono);font-size:12px;background:#eef5f4;color:var(--brand);padding:2px 6px;border-radius:5px;font-weight:700;white-space:nowrap}
+  details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 17px;margin-bottom:12px}
+  summary{cursor:pointer;font-weight:700;font-size:14px}
+  ol.mini{margin:10px 0 0 18px;font-size:13.5px;line-height:1.95}
+  table{width:100%;border-collapse:collapse;font-size:13px;margin-top:9px}
+  td{padding:7px 8px;border-bottom:1px solid var(--line-soft);vertical-align:top}
+  td:first-child{white-space:nowrap;font-weight:700}
+  .foot{text-align:center;color:var(--muted-2);font-size:12px;margin-top:20px;line-height:1.8}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="logo">
+    <svg viewBox="0 0 32 32" fill="none"><rect x="3.5" y="3.5" width="25" height="25" rx="6" stroke="#0B6E63" stroke-width="2.4"/><circle cx="21.5" cy="11" r="3.4" fill="#F0A63C"/><path d="M7 21.5c3.2-4.2 5.4 1.8 8.6-1.4 2.6-2.6 4.4.2 9.4-3.6" stroke="#12B3A0" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="0.5 4"/><path d="M23.9 22.1c-.8-.9-2.3-.7-2.8.3-.5-1-2-1.2-2.8-.3-.6.7-.5 1.8.2 2.4l2.6 2.2 2.6-2.2c.7-.6.8-1.7.2-2.4z" fill="#E5533C"/></svg>
+    Trippi
+  </div>
+  <div class="sub">同太太夾行程 ・ 一頁睇晒</div>
+</header>
+
+<div class="hero">
+  <span class="badge">唔使註冊 ・ 唔使設定 ・ 唔使伺服器</span>
+  <h2>🤝 掃 QR 或者入 6 位代碼，即刻一齊改</h2>
+  <ol class="steps">
+    <li><b>你</b>：開行程 → 撳 <span class="btnish">🤝 協作</span> → <span class="btnish">建立協作房間</span><br>
+      見到「<b>✅ 即時同步已連線</b>」＋ 一個 QR code ＋ 6 位房間代碼</li>
+    <li><b>太太</b>：喺自己部機開 Trippi →「<b>我的行程</b>」→ 撳 <span class="btnish">📷 掃 QR 加入</span>，對住你個芒掃一掃</li>
+    <li>掃唔到？直接將嗰 <b>6 位代碼</b>（例如 <span class="k" style="background:#ffffff26;color:#fff">RNVZKB</span>）打入去 → 撳 <span class="btnish">🤝 加入協作房間</span></li>
+    <li>搞掂 — <b>任何一邊改嘢，另一邊即刻見到</b>：加景點、改時間、記帳，全部即時同步</li>
+  </ol>
+  <div class="note">
+    ✅ iPhone／Android／電腦都得，唔使喺同一個網頁、唔使同一個 Wi-Fi<br>
+    ✅ 幾多人都入得同一個房 — 全家一齊夾都得<br>
+    ✅ 行程內容有加密先至傳出去；不過知道代碼嘅人就睇到，所以唔好公開貼個代碼<br>
+    ⚠️ 要有網路先同步到；離線改嘅嘢會喺連返網之後傳出去（以最後儲存為準）
+  </div>
+</div>
+
+<div class="card">
+  <h3>🤔 咁「📤 傳連結」呢？</h3>
+  <p><b>嗰個係「傳一份副本」</b> — 適合淨係想畀對方<u>睇</u>，或者對方唔想即時跟你改嘢嘅情況。</p>
+  <p style="margin-bottom:0">想兩個人<u>一齊改、即時見到對方改嘢</u>，就用上面嘅<b>協作房間</b>（掃 QR／入代碼）。</p>
+</div>
+
+<details>
+  <summary>🆘 幾個常見問題</summary>
+  <table>
+    <tr><td>掃 QR 冇反應</td><td>畀相機權限佢；如果部機真係掃唔到，直接打嗰 6 位代碼一樣入到房</td></tr>
+    <tr><td>「搵唔到房間」</td><td>檢查 6 位代碼有冇打錯；如果個房開咗好耐，叫開房嗰位打開 Trippi 隨便改樣嘢（會重新廣播成個行程）</td></tr>
+    <tr><td>離開咗會點？</td><td>撳「離開協作」之後你嗰份行程會保留喺本機，只係唔再同步</td></tr>
+    <tr><td>公司／學校網絡用唔到</td><td>有啲網絡會封鎖 WebSocket — 轉用手機數據，或者喺「🤝 協作 → 🔍 診斷同步」睇原因</td></tr>
+    <tr><td>對方冇 Trippi？</td><td>傳個 Trippi 網址或者檔案畀佢，開咗之後撳「📷 掃 QR 加入」就得（免費）</td></tr>
+  </table>
+</details>
+
+<div class="foot">
+  一句話：<b>一個開房，其他人掃 QR 或者入代碼，即刻一齊改。</b><br>
+  Trippi ・ 免費 ・ 離線優先 ・ 資料喺你自己手上
+</div>
+</div>
+</body>
+</html>
